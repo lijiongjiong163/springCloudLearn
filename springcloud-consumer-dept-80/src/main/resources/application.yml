@@ -1,2 +1,9 @@
 server:
   port: 80
+#Eureka配置
+eureka:
+  client:
+    register-with-eureka: false  #不注册自己（消费者没必要，又没人调用他）
+    service-url:
+      defaultZone: http://eureka-server1:7001/eureka/,http://eureka-server2:7002/eureka/    #注册中心地址
+

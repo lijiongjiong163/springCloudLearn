@@ -17,7 +17,10 @@ public class DeptConsumerContorller {
     //使用restTemplate来调用其他服务的端口,提供多种便捷访问http服务的方法，简单的restful服务。
     @Autowired
     private RestTemplate restTemplate;
-    private final static String REST_URL_PREFIX="http://localhost:8001/dept";
+    //原来直接访问提供者的端口，集成ribbon后就可以通过在注册中心的应用名称来访问具体应用了
+    //private final static String REST_URL_PREFIX="http://localhost:8001/dept";
+    private final static String REST_URL_PREFIX="http://SPRINGCLOUD-PROVIDER-DEPT:8001/dept";
+
     @RequestMapping("/add")
     public boolean add(Dept dept){
         return restTemplate.postForObject(REST_URL_PREFIX+"/add",dept,Boolean.class);

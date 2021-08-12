@@ -12,6 +12,6 @@ eureka:
     fetch-registry: false   #为false则表示自己就是注册中心
     service-url:
       #单机：就关注自己
-      #集群（关联）：关联别人，
+      #集群（关联）：关联别人,填别人的地址（如果两个应用在同一台上，居然必须配置host来区分。无语）
       defaultZone: http://eureka-server2:7002/eureka/
 

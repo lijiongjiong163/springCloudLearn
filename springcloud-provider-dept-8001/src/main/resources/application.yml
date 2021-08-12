@@ -21,7 +21,7 @@ eureka:
     service-url:
       defaultZone: http://localhost:7001/eureka/,http://localhost:7002/eureka/    #注册中心地址
   instance:
-    instance-id: dept提供者  #用来修改注册中心上此应用的默认描述信息
+    instance-id: dept提供者8001  #用来修改注册中心上此应用的默认描述信息
 
 #引入actuator依赖后，配置info中的信息，即可在erueka点击描述后显示出来
 info:
